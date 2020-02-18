@@ -1,10 +1,12 @@
 package iteration
 
+import "strings"
+
 // Similar to strings.Repeat
 func Repeat(character string, nTimes int) string {
-	var charSequence string
+	var sb strings.Builder
 	for i := 0; i < nTimes; i++ {
-		charSequence += character
+		sb.WriteString(character)
 	}
-	return charSequence
+	return sb.String()
 }
